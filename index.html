@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ronaldo Sobral</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* estilo do botão zoeiro */
+    #botaoZoeiro {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      color: #000000;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    #botaoZoeiro:active {
+      transform: scale(0.9);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> < RÔDEV > <sup></sup></h1>
+    <nav>
+      <a href="#">QUEM SOU?</a>
+      <a href="#">CONTATO</a>
+      <a href="#">PROJETOS</a>
+    </nav>
+  </header>
+
+  <div class="marquee">
+    <span> Programando...quase la...</span>
+  </div>
+
+  <div class="main">
+    <div class="profile">
+      <img src="Gato.gif" alt="gatogif">
+      <h2>Ronaldo Sobral</h2>
+      <p>Dev Front-End.</p>
+      <p>Gym-Lifestyle.</p>
+      <p>Editor e Filmmaker por hobby.</p>
+      <p class="email">ronaldosobral2002@gmail.com</p>
+    </div>
+
+    <div class="links">
+      <!-- Botão zoeiro no lugar do "Clica aqui, pra ver uma coisa" -->
+      <button id="botaoZoeiro"> Clica aí </button>
+
+      <a href="" class="btn">Ultimo Projeto</a>
+      <div class="arrow">⬆</div>
+      <div class="grid">
+        <a href="https://github.com/RoSobralDev" class="btn">GitHub</a>
+        <a href="https://www.instagram.com/ro_sobral7/" class="btn">Instagram</a>
+        <a href="https://open.spotify.com/user/ronaldosoball?si=l7NkLJfNSmKR3IaDDx-W9g" class="btn">Spotify</a>
+        <a href="https://www.linkedin.com/in/ronaldo-sobral-360b43233/" class="btn">Linkedin</a>
+        
+        <footer>
+          <p>
+            <span class="line"></span>
+            <span class="underline">website</span> feito por
+            <a href="https://prnt.sc/THB-NmSkBVzP" class="circle">this guy.</a>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const botao = document.getElementById("botaoZoeiro");
+
+    const cores = ["#e74c3c", "#8e44ad", "#3498db", "#27ae60", "#f39c12", "#d35400"];
+    const frases = [
+      "Tá clicando pq?",
+      "Achou que ia ganhar algo? 😂",
+      "Mais forte, vai que funciona...",
+      "Você não cansa não?",
+      "Última chance... mentira!",
+      "Botão 1 x 0 Você"
+    ];
+
+    let index = 0;
+
+    botao.addEventListener("click", () => {
+      botao.style.background = cores[index % cores.length];
+      botao.textContent = frases[index % frases.length];
+      index++;
+    });
+  </script>
+</body>
+</html>
